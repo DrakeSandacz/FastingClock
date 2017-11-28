@@ -14,6 +14,7 @@
 		BF5C97111F90031400F83B26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF5C970F1F90031400F83B26 /* LaunchScreen.storyboard */; };
 		BF5C971C1F90031500F83B26 /* Fasting_ClockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5C971B1F90031500F83B26 /* Fasting_ClockTests.swift */; };
 		BF5C97271F90031500F83B26 /* Fasting_ClockUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5C97261F90031500F83B26 /* Fasting_ClockUITests.swift */; };
+		BF931CBD1F9A75B900AF4C9A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF931CBC1F9A75B900AF4C9A /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		BF5C97221F90031500F83B26 /* Fasting ClockUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Fasting ClockUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF5C97261F90031500F83B26 /* Fasting_ClockUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fasting_ClockUITests.swift; sourceTree = "<group>"; };
 		BF5C97281F90031500F83B26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF931CBC1F9A75B900AF4C9A /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				BF5C970D1F90031400F83B26 /* Assets.xcassets */,
 				BF5C970F1F90031400F83B26 /* LaunchScreen.storyboard */,
 				BF5C97121F90031400F83B26 /* Info.plist */,
+				BF931CBC1F9A75B900AF4C9A /* GoogleService-Info.plist */,
 			);
 			path = "Fasting Clock";
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF5C97111F90031400F83B26 /* LaunchScreen.storyboard in Resources */,
+				BF931CBD1F9A75B900AF4C9A /* GoogleService-Info.plist in Resources */,
 				BF5C970E1F90031400F83B26 /* Assets.xcassets in Resources */,
 				BF5C970C1F90031400F83B26 /* Main.storyboard in Resources */,
 			);

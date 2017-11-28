@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,208 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Fasting_Clock" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangle_5_480" translatesAutoresizingMaskIntoConstraints="NO" id="Mca-2q-mVR">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="620"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock_360" translatesAutoresizingMaskIntoConstraints="NO" id="qPL-nc-6lH">
+                                <rect key="frame" x="108" y="37" width="100" height="105"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5KG-Vh-fc0">
+                                <rect key="frame" x="40" y="463" width="240" height="55"/>
+                                <state key="normal" image="Group 2"/>
+                                <connections>
+                                    <segue destination="7aZ-Cr-rv0" kind="show" id="5eY-nD-lvO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yCQ-gh-SiO">
+                                <rect key="frame" x="107" y="526" width="106" height="24"/>
+                                <state key="normal" image="Login"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FASTING CLOCK" translatesAutoresizingMaskIntoConstraints="NO" id="NPk-xO-r7T">
+                                <rect key="frame" x="40" y="150" width="240" height="23"/>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" directionalLockEnabled="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TfR-Dc-yHw">
+                                <rect key="frame" x="0.0" y="189" width="320" height="242"/>
+                                <viewLayoutGuide key="safeArea" id="4Zp-WT-ToJ"/>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" enabled="NO" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="68e-2h-YO1">
+                                <rect key="frame" x="141" y="429" width="39" height="37"/>
+                            </pageControl>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="TfR-Dc-yHw" firstAttribute="top" secondItem="NPk-xO-r7T" secondAttribute="bottom" constant="16" id="4Ql-08-VCP"/>
+                            <constraint firstItem="Mca-2q-mVR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="6Gz-bN-PUd"/>
+                            <constraint firstItem="TfR-Dc-yHw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8wp-Ay-CHu"/>
+                            <constraint firstItem="68e-2h-YO1" firstAttribute="top" secondItem="TfR-Dc-yHw" secondAttribute="bottom" constant="-2" id="HVd-9m-C4z"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yCQ-gh-SiO" secondAttribute="trailing" constant="107" id="JeL-DN-gy1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NPk-xO-r7T" secondAttribute="trailing" constant="40" id="M0n-XJ-IC0"/>
+                            <constraint firstItem="5KG-Vh-fc0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="OJj-Ny-hSH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5KG-Vh-fc0" secondAttribute="trailing" constant="40" id="QYt-oC-d2O"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="68e-2h-YO1" secondAttribute="trailing" constant="140" id="Rzb-im-xPj"/>
+                            <constraint firstItem="yCQ-gh-SiO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="VNW-Jc-GdX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qPL-nc-6lH" secondAttribute="trailing" constant="112" id="X56-1I-dpP"/>
+                            <constraint firstItem="qPL-nc-6lH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="108" id="Ycu-gd-vQZ"/>
+                            <constraint firstItem="5KG-Vh-fc0" firstAttribute="top" secondItem="NPk-xO-r7T" secondAttribute="bottom" constant="290" id="bUb-rt-yMb"/>
+                            <constraint firstItem="TfR-Dc-yHw" firstAttribute="centerX" secondItem="NPk-xO-r7T" secondAttribute="centerX" id="fA3-vd-LLz"/>
+                            <constraint firstItem="68e-2h-YO1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="141" id="fda-lr-mYB"/>
+                            <constraint firstItem="NPk-xO-r7T" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="fxG-tQ-6PT"/>
+                            <constraint firstItem="68e-2h-YO1" firstAttribute="top" secondItem="NPk-xO-r7T" secondAttribute="bottom" constant="256" id="h6N-vq-Pef"/>
+                            <constraint firstItem="TfR-Dc-yHw" firstAttribute="leading" secondItem="Mca-2q-mVR" secondAttribute="leading" id="jrD-6W-LS4"/>
+                            <constraint firstItem="yCQ-gh-SiO" firstAttribute="top" secondItem="5KG-Vh-fc0" secondAttribute="bottom" constant="8" id="pZU-bs-NKR"/>
+                            <constraint firstItem="qPL-nc-6lH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="17" id="rFN-sn-mUO"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Mca-2q-mVR" secondAttribute="bottom" constant="-52" id="sgl-iR-Nxl"/>
+                            <constraint firstItem="TfR-Dc-yHw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="189" id="xZ2-Qa-FFH"/>
+                            <constraint firstItem="TfR-Dc-yHw" firstAttribute="trailing" secondItem="Mca-2q-mVR" secondAttribute="trailing" id="xfb-Mg-GhJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="featurePageControl" destination="68e-2h-YO1" id="Hn4-Ej-pEe"/>
+                        <outlet property="mainScrollView" destination="TfR-Dc-yHw" id="Wru-Q4-Xbv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="69.375" y="195.42253521126761"/>
+        </scene>
+        <!--signUpViewController-->
+        <scene sceneID="UeL-5e-sZB">
+            <objects>
+                <viewController storyboardIdentifier="signUpViewController" id="AP1-4O-ymL" userLabel="signUpViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uef-Ru-YdL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangle_5_480" translatesAutoresizingMaskIntoConstraints="NO" id="nrf-x3-9gl">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="620"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FASTING CLOCK" translatesAutoresizingMaskIntoConstraints="NO" id="eaY-6l-riS">
+                                <rect key="frame" x="40" y="150" width="240" height="23"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock_360" translatesAutoresizingMaskIntoConstraints="NO" id="lWv-i9-0zS">
+                                <rect key="frame" x="108" y="37" width="100" height="105"/>
+                            </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wON-1t-OKK">
+                                <rect key="frame" x="71" y="309" width="150" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="eaY-6l-riS" firstAttribute="top" secondItem="lWv-i9-0zS" secondAttribute="bottom" constant="8" id="8DT-mv-ZQY"/>
+                            <constraint firstAttribute="trailing" secondItem="nrf-x3-9gl" secondAttribute="trailing" id="GSV-LI-bZQ"/>
+                            <constraint firstItem="eaY-6l-riS" firstAttribute="leading" secondItem="a6j-wB-Hu6" secondAttribute="leading" constant="40" id="HPI-0k-gD6"/>
+                            <constraint firstItem="a6j-wB-Hu6" firstAttribute="trailing" secondItem="eaY-6l-riS" secondAttribute="trailing" constant="40" id="Ixb-mw-cgO"/>
+                            <constraint firstItem="lWv-i9-0zS" firstAttribute="leading" secondItem="a6j-wB-Hu6" secondAttribute="leading" constant="108" id="Sz4-eZ-SYi"/>
+                            <constraint firstItem="a6j-wB-Hu6" firstAttribute="trailing" secondItem="lWv-i9-0zS" secondAttribute="trailing" constant="112" id="Vjd-pI-flI"/>
+                            <constraint firstItem="nrf-x3-9gl" firstAttribute="leading" secondItem="Uef-Ru-YdL" secondAttribute="leading" id="deQ-sn-Xm7"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="nrf-x3-9gl" secondAttribute="bottom" constant="-52" id="l2j-gD-JY0"/>
+                            <constraint firstItem="nrf-x3-9gl" firstAttribute="top" secondItem="Uef-Ru-YdL" secondAttribute="top" id="vBn-N1-ODf"/>
+                            <constraint firstItem="lWv-i9-0zS" firstAttribute="top" secondItem="a6j-wB-Hu6" secondAttribute="top" constant="17" id="yZt-aL-N5C"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="a6j-wB-Hu6"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TMz-hu-cPI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1515" y="194.36619718309859"/>
+        </scene>
+        <!--setTimerFirstTimeSignInViewController-->
+        <scene sceneID="APt-EH-4YT">
+            <objects>
+                <viewController title="setTimerFirstTimeSignInViewController" id="7aZ-Cr-rv0" customClass="ViewController" customModule="Fasting_Clock" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Bgp-i2-gFr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangle_5_480" translatesAutoresizingMaskIntoConstraints="NO" id="Zte-NC-u0v">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="620"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock_360" translatesAutoresizingMaskIntoConstraints="NO" id="JOl-KQ-Jla">
+                                <rect key="frame" x="108" y="37" width="100" height="105"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group" translatesAutoresizingMaskIntoConstraints="NO" id="2Yb-q0-7jn">
+                                <rect key="frame" x="60" y="161" width="200" height="80"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pc-mI-9gJ">
+                                <rect key="frame" x="20" y="24" width="32" height="22"/>
+                                <state key="normal" image="path_360"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="Zyc-D9-RmI"/>
+                                </connections>
+                            </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="4fb-Gk-h1Y">
+                                <rect key="frame" x="0.0" y="230" width="320" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="531181260.49411899">
+                                    <!--2017-10-31 22:21:00 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ZZ-7V-FyY">
+                                <rect key="frame" x="40" y="443" width="240" height="58"/>
+                                <state key="normal" image="group_4_360"/>
+                                <connections>
+                                    <action selector="buohwe:" destination="tAH-6W-vfu" eventType="touchUpInside" id="otM-Q0-eEc"/>
+                                    <action selector="setFastingTimer:" destination="tAH-6W-vfu" eventType="touchUpInside" id="26J-33-tZd"/>
+                                    <action selector="setFastingTimerButton:" destination="tAH-6W-vfu" eventType="touchUpInside" id="bzH-JD-ntO"/>
+                                    <action selector="setFastingTimerButton:" destination="7aZ-Cr-rv0" eventType="touchUpInside" id="xRI-Pf-fBu"/>
+                                    <action selector="setFastingTimerButton:forEvent:" destination="tAH-6W-vfu" eventType="touchUpInside" id="UgW-yv-jRH"/>
+                                    <action selector="startFastingTimer:" destination="tAH-6W-vfu" eventType="touchUpInside" id="pJH-dt-MB8"/>
+                                    <segue destination="AP1-4O-ymL" kind="show" id="aHZ-E8-ONY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6pc-mI-9gJ" firstAttribute="top" secondItem="0fv-e7-Fgn" secondAttribute="top" constant="4" id="0FR-aB-Prn"/>
+                            <constraint firstItem="2Yb-q0-7jn" firstAttribute="top" secondItem="JOl-KQ-Jla" secondAttribute="bottom" constant="19" id="5CY-Sc-2zp"/>
+                            <constraint firstItem="4fb-Gk-h1Y" firstAttribute="trailing" secondItem="0fv-e7-Fgn" secondAttribute="trailing" id="8uq-Vz-bBJ"/>
+                            <constraint firstItem="0fv-e7-Fgn" firstAttribute="bottom" secondItem="4fb-Gk-h1Y" secondAttribute="bottom" constant="122" id="Bbv-DQ-Q7P"/>
+                            <constraint firstItem="0fv-e7-Fgn" firstAttribute="trailing" secondItem="JOl-KQ-Jla" secondAttribute="trailing" constant="112" id="JJ4-Ff-WQE"/>
+                            <constraint firstItem="4fb-Gk-h1Y" firstAttribute="trailing" secondItem="0fv-e7-Fgn" secondAttribute="trailing" id="KIy-DR-9gw"/>
+                            <constraint firstItem="0fv-e7-Fgn" firstAttribute="trailing" secondItem="2Yb-q0-7jn" secondAttribute="trailing" constant="60" id="OVi-Ph-Zj4"/>
+                            <constraint firstItem="2Yb-q0-7jn" firstAttribute="leading" secondItem="0fv-e7-Fgn" secondAttribute="leading" constant="60" id="QQM-Qj-oXS"/>
+                            <constraint firstItem="0fv-e7-Fgn" firstAttribute="trailing" secondItem="3ZZ-7V-FyY" secondAttribute="trailing" constant="40" id="REN-oc-xww"/>
+                            <constraint firstItem="0fv-e7-Fgn" firstAttribute="trailing" secondItem="6pc-mI-9gJ" secondAttribute="trailing" constant="268" id="Uyp-nR-ke7"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Zte-NC-u0v" secondAttribute="bottom" constant="-52" id="V19-kA-jX5"/>
+                            <constraint firstItem="Zte-NC-u0v" firstAttribute="leading" secondItem="Bgp-i2-gFr" secondAttribute="leading" id="XZe-Ng-zPs"/>
+                            <constraint firstItem="Zte-NC-u0v" firstAttribute="top" secondItem="Bgp-i2-gFr" secondAttribute="top" id="ZBN-gJ-GuQ"/>
+                            <constraint firstItem="4fb-Gk-h1Y" firstAttribute="leading" secondItem="0fv-e7-Fgn" secondAttribute="leading" id="d5B-bi-PJH"/>
+                            <constraint firstItem="0fv-e7-Fgn" firstAttribute="bottom" secondItem="3ZZ-7V-FyY" secondAttribute="bottom" constant="67" id="dHj-ed-Eh9"/>
+                            <constraint firstItem="JOl-KQ-Jla" firstAttribute="leading" secondItem="0fv-e7-Fgn" secondAttribute="leading" constant="108" id="lTx-zf-dye"/>
+                            <constraint firstItem="JOl-KQ-Jla" firstAttribute="top" secondItem="0fv-e7-Fgn" secondAttribute="top" constant="17" id="mE7-iK-Ymf"/>
+                            <constraint firstAttribute="trailing" secondItem="Zte-NC-u0v" secondAttribute="trailing" id="mhO-Ii-9y5"/>
+                            <constraint firstItem="3ZZ-7V-FyY" firstAttribute="leading" secondItem="0fv-e7-Fgn" secondAttribute="leading" constant="40" id="nAs-Qk-YCz"/>
+                            <constraint firstItem="4fb-Gk-h1Y" firstAttribute="leading" secondItem="0fv-e7-Fgn" secondAttribute="leading" id="pyw-4p-Nmu"/>
+                            <constraint firstItem="6pc-mI-9gJ" firstAttribute="leading" secondItem="0fv-e7-Fgn" secondAttribute="leading" constant="20" id="sXQ-NV-zXj"/>
+                            <constraint firstItem="4fb-Gk-h1Y" firstAttribute="top" secondItem="0fv-e7-Fgn" secondAttribute="top" constant="210" id="tyY-o7-QUi"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0fv-e7-Fgn"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="rpV-y1-tBe"/>
+                    <connections>
+                        <outlet property="timePicker" destination="4fb-Gk-h1Y" id="jNx-Zo-b5N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oxy-yF-5ru" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="tAH-6W-vfu" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="802.5" y="194.36619718309859"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="FASTING CLOCK" width="240" height="23"/>
+        <image name="Group" width="275" height="80"/>
+        <image name="Group 2" width="240" height="55"/>
+        <image name="Login" width="54" height="24"/>
+        <image name="clock_360" width="105" height="105"/>
+        <image name="group_4_360" width="253" height="58"/>
+        <image name="path_360" width="12" height="22"/>
+        <image name="rectangle_5_480" width="270" height="480"/>
+    </resources>
 </document>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleIdentifier</key>
+	<dict>
+		<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
+		<string>ca-app-pub-3940256099942544/2934735716</string>
+		<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
+		<string>ca-app-pub-3940256099942544/4411468910</string>
+		<key>CLIENT_ID</key>
+		<string>83207000801-vtcm9ecv2383v41fu5fbclnqb7n7lp37.apps.googleusercontent.com</string>
+		<key>REVERSED_CLIENT_ID</key>
+		<string>com.googleusercontent.apps.83207000801-vtcm9ecv2383v41fu5fbclnqb7n7lp37</string>
+		<key>API_KEY</key>
+		<string>AIzaSyAG5P7VGgjbJMSXIHUpCawKBDIk-iCSDQo</string>
+		<key>GCM_SENDER_ID</key>
+		<string>83207000801</string>
+		<key>PLIST_VERSION</key>
+		<string>1</string>
+		<key>BUNDLE_ID</key>
+		<string>Bonfire.Fasting-Clock</string>
+		<key>PROJECT_ID</key>
+		<string>fasting-timer</string>
+		<key>STORAGE_BUCKET</key>
+		<string>fasting-timer.appspot.com</string>
+		<key>IS_ADS_ENABLED</key>
+		<true/>
+		<key>IS_ANALYTICS_ENABLED</key>
+		<false/>
+		<key>IS_APPINVITE_ENABLED</key>
+		<false/>
+		<key>IS_GCM_ENABLED</key>
+		<true/>
+		<key>IS_SIGNIN_ENABLED</key>
+		<true/>
+		<key>GOOGLE_APP_ID</key>
+		<string>1:83207000801:ios:c6a5ada3329ae239</string>
+		<key>DATABASE_URL</key>
+		<string>https://fasting-timer.firebaseio.com</string>
+	</dict>
+</dict>
+</plist>
