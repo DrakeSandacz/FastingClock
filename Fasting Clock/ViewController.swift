@@ -11,26 +11,29 @@ import UIKit
 
 class ViewController: UIViewController, UIScrollViewDelegate {
     
+ 
     @IBOutlet var mainScrollView: UIScrollView!
     @IBOutlet var featurePageControl: UIPageControl!
-    @IBOutlet weak var timePicker: UIDatePicker!
     
-    @IBAction func setFastingTimerButton(_ sender: UIButton) {
-        // This function gets the hours and minutes the user chose for when they go to bed, it then adds 16 hours to whatever they had and notifies them everyday.
-        let date = timePicker.date
-        let components = Calendar.current.dateComponents([.hour, .minute], from: date)
-        let hour = components.hour
-        let minutes = components.minute
-        print("\(hour!):\(minutes!)")
-        
-    }
+    // Gets the hours and minute for time of ending meal.
+//    @IBOutlet weak var timePicker: UIDatePicker!
+    
+//    @IBAction func setFastingTimerButton(_ sender: UIButton) {
+//        // This function gets the hours and minutes the user chose for when they go to bed, it then adds 16 hours to whatever they had and notifies them everyday.
+//        let date = timePicker.date
+//        let components = Calendar.current.dateComponents([.hour, .minute], from: date)
+//        let hour = components.hour
+//        let minutes = components.minute
+//        print("\(hour!):\(minutes!)")
+//
+//
+//    }
     
     
     var imageArray = [UIImage]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         // Begin Slideshow Code
         if mainScrollView == nil {
@@ -51,21 +54,29 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             }
             // End Slideshow Code
 
-        }
         
+        
+    }
+    
     }
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let page = scrollView.contentOffset.x / scrollView.frame.size.width
         featurePageControl.currentPage = Int(page)
         
-        
     }
+    
+    
+
+
+
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-    
-    
 }
+
+    
+
 
 
